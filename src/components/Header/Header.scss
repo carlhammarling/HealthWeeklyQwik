@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+.header {
+  background-color: $orange;
+  //   padding-block: $space-normal-mobile;
+  padding-block: $space3;
+  padding-inline: $space-sides-mobile;
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+
+    .iconWrapper {
+        display: flex;
+        width: 30px;
+        aspect-ratio: 1;
+
+        i {
+            color: $white;
+          }
+    }
+
+    button {
+        border: 0;
+        background: transparent;
+    }
+  }
+  input {
+    width: 100%;
+    padding: $space1 $space2;
+    border: 0;
+    border-radius: $rounded4;
+    color: $gray;
+    font-size: 16px;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+}

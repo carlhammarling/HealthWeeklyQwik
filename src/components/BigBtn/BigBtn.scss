@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.bigBtn {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+  background-color: $white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: $shadow2;
+
+
+  button {
+    background-color: $primaryGreen;
+    border: 0;
+    font-size: 16px;
+    border-radius: $rounded2;
+    color: $white;
+    display: grid;
+    place-content: center;
+    height: 52px;
+    margin: $space-normal-mobile $space-sides-mobile;
+  }
+}

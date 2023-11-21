@@ -1,7 +1,7 @@
 import { component$, useStyles$, useStylesScoped$ } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
 import homeStyle from "./index.scss?inline";
-import logo from '../assets/images/LogoHW.png';
+import logo from "../assets/images/LogoHW.png";
 
 export default component$(() => {
   useStylesScoped$(homeStyle);
@@ -23,13 +23,13 @@ export default component$(() => {
         fill="none"
       >
         <path
-          d="M0 25.6531V25.6531C127.796 -8.19853 262.204 -8.19853 390 25.6531V25.6531H0Z"
+          d="M0 26V26C127.768 -8.07137 262.232 -8.07137 390 26V26H0Z"
           fill="white"
         />
       </svg>
       <div class="homeInfo">
-        <h1>Fancy food made simple!</h1>
-        <p>
+        <h1 class="text-center">Fancy food made simple!</h1>
+        <p class="text-center">
           We deliver healthy food for you and your family that lasts the whole
           week.
         </p>
@@ -48,6 +48,25 @@ export const head: DocumentHead = {
     {
       name: "health Weekly",
       content: "Fancy foo made simple!",
+    },
+  ],
+  links: [
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.googleapis.com'
+    },
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com',
+      crossorigin: 'anonymous'
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap'
+    },
+    {
+      rel: 'stylesheet',
+      href: '../global.scss'
     },
   ],
 };

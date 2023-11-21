@@ -4,24 +4,42 @@ h1 {
     font-size: 28px;
 }
 
-p {
+p, .p {
     font-size: 16px;
     color: $gray;
-}
-p.xs {
-    font-size: 12px;
-    color: $gray;
+
+    &.xs {
+        font-size: 12px;
+        color: $gray;
+    }
+
+    &.sharp {
+        font-weight: 600;
+        color: $black;
+    }
+    &.light {
+        font-weight: 300;
+        font-size: 14px;
+    }
 }
 
 a {
     text-decoration: none;
     color: $black;
 }
-a.btn {
+
+button {
+    font-size: 1rem;
+}
+.btn {
    font-size: 28px;
    font-weight: 700;
 }
 
 .success {
     color: $successGreen;
+}
+
+.text-center {
+    text-align: center;
 }

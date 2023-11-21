@@ -1,37 +1,34 @@
-@import "../styles/variables";
+@import "../../styles/variables";
 
-.home {
+.location {
   background-color: $orange;
   display: flex;
   flex-direction: column;
   height: 100dvh;
+  position: relative;
 
-  .logoArea {
+  .mapArea {
     flex-grow: 1;
     display: grid;
     place-items: center;
     position: relative;
 
-    .goBtn {
+    .centerBtn {
       display: grid;
       place-items: center;
       position: absolute;
       background-color: $white;
+      border: 0px;
       width: 86px;
       bottom: -43px;
       border-radius: $rounded3;
       box-shadow: $shadow1;
       aspect-ratio: 1;
       z-index: 2;
-      a {
-        text-decoration: none;
-        color: $black;
-      }
     }
   }
 
-
-  .homeInfo {
+  .locationInfo {
     height: 340px;
     padding-inline: $space-sides-mobile;
     background-color: $white;
@@ -40,12 +37,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-    .smallInfo {
-        display: flex;
-        align-items: center;
-        gap: $space-normal-mobile;
-    }
+    padding-bottom: 7rem;
   }
   svg {
     transform: translateY(1px);

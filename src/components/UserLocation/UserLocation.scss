@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.userLocation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .adress {
+      display: flex;
+      align-items: center;
+      gap: $space-normal-mobile;
+
+      i {
+        color: $gray;
+      }
+    }
+  }

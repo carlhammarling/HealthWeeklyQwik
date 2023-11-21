@@ -1,18 +1,11 @@
 @import './styles//fonts';
 @import './styles/variables';
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
-html {
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
+* {
+  padding: 0;
+  line-height: inherit;
+  margin: 0;
+  box-sizing: border-box;
   font-family:
   'Montserrat',
     ui-sans-serif,
@@ -29,11 +22,4 @@ html {
     "Segoe UI Emoji",
     "Segoe UI Symbol",
     "Noto Color Emoji";
-}
-
-* {
-  padding: 0;
-  line-height: inherit;
-  margin: 0;
-  box-sizing: border-box;
 }
