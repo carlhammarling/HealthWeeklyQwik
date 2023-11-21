@@ -1,0 +1,50 @@
+@import "../styles/variables";
+
+.home {
+  background-color: $orange;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+
+  .logoArea {
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+    position: relative;
+
+    .goBtn {
+      display: grid;
+      place-items: center;
+      position: absolute;
+      background-color: $white;
+      width: 86px;
+      bottom: -43px;
+      border-radius: $space-normal-mobile;
+      box-shadow: $shadow1;
+      aspect-ratio: 1;
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+  }
+
+
+  .homeInfo {
+    height: 340px;
+    padding-inline: $space6;
+    background-color: $white;
+    padding-block: $space-xl-mobile;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    .smallInfo {
+        display: flex;
+        align-items: center;
+        gap: $space-normal-mobile;
+    }
+  }
+}
