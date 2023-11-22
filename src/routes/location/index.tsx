@@ -1,7 +1,7 @@
 import { component$, useStyles$, useStylesScoped$, $ } from "@builder.io/qwik";
 import locationStyles from "./location.scss?inline";
 import { UserLocation } from "~/components/UserLocation/UserLocation";
-import { BigBtn } from "~/components/BigBtn/BigBtn";
+import { BigBtn } from "~/components/atoms/BigBtn/BigBtn";
 import { FaLocationCrosshairsSolid } from "@qwikest/icons/font-awesome";
 export default component$(() => {
   useStylesScoped$(locationStyles);

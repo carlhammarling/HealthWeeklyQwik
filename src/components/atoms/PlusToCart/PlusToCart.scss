@@ -1,0 +1,12 @@
+@import "../../../styles/variables";
+
+.plusToCart {
+    display: grid;
+    place-content: center;
+    background-color: $lightestGray;
+    color: $gray;
+    border: 0;
+    width: 24px;
+    height: 24px;            
+    border-radius: $rounded0;
+}

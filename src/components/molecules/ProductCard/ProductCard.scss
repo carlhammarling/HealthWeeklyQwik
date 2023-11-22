@@ -1,0 +1,42 @@
+@import "../../../styles/variables";
+
+
+.productCard {
+    display: flex;
+    gap: $space-normal-mobile;
+    width: 100%;
+
+    .imgContainer {
+        position: relative;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            aspect-ratio: 1;
+            width: 115px;
+            height: 115px;
+            border-radius: $rounded1;
+        }
+        .plusToCart {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: $space0;
+        }
+    
+    }
+
+    .prodInfo {
+        display: flex;
+        flex-direction: column;
+        gap: $space0;
+
+        :first-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+    }
+   
+}
