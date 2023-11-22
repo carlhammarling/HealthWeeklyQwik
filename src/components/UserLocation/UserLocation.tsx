@@ -1,18 +1,21 @@
-import { component$, useStylesScoped$ } from '@builder.io/qwik';
-import UserLocationStyles from './UserLocation.scss?inline'
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import UserLocationStyles from "./UserLocation.scss?inline";
+import { FaLocationDotSolid, FaPenSolid } from "@qwikest/icons/font-awesome";
 
 export const UserLocation = component$(() => {
-    useStylesScoped$(UserLocationStyles);
+  useStylesScoped$(UserLocationStyles);
   return (
     <div class="userLocation">
-    <div class="adress">
-      <i class="fa-solid fa-location-dot fa-2xl"></i>
-      <div>
-        <p class="sharp">Södermalmstorg 1</p>
-        <p class="light">12451, Stockholm</p>
+      <div class="adress">
+        <FaLocationDotSolid class="icon" />
+        <div>
+          <p class="sharp">Södermalmstorg 1</p>
+          <p class="light">12451, Stockholm</p>
+        </div>
       </div>
+      <button class="editBtn">
+        <FaPenSolid />
+      </button>
     </div>
-    <i class="fa-solid fa-pen fa-xl"></i>
-  </div>
-  )
+  );
 });

@@ -11,8 +11,17 @@
       align-items: center;
       gap: $space-normal-mobile;
 
-      i {
+      .icon {
         color: $gray;
+        font-size: $icon-size;
       }
+    }
+    .editBtn {
+      border: 0;
+      width: 35px;
+      transform: translateX(5px);
+      aspect-ratio: 1;
+      background-color: transparent;
+      font-size: $icon-size-sm;
     }
   }

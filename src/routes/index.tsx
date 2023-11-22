@@ -1,5 +1,7 @@
 import { component$, useStyles$, useStylesScoped$ } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
+import { FaCircleCheckSolid } from '@qwikest/icons/font-awesome'
+
 import homeStyle from "./index.scss?inline";
 import logo from "../assets/images/LogoHW.png";
 
@@ -34,7 +36,7 @@ export default component$(() => {
           week.
         </p>
         <div class="smallInfo">
-          <i class="fa-solid fa-circle-check success"></i>
+          <FaCircleCheckSolid class="success" />
           <p class="xs">Re-used packaging - No waste</p>
         </div>
       </div>

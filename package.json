@@ -44,6 +44,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@qwikest/icons": "^0.0.13",
     "qwik-fontawesome": "^0.2.0",
     "react-icons": "^4.12.0",
     "sass": "^1.69.5"

@@ -16,8 +16,9 @@
         width: 30px;
         aspect-ratio: 1;
 
-        i {
+        .icon {
             color: $white;
+            font-size: $icon-size;
           }
     }
 

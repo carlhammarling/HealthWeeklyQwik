@@ -2,6 +2,7 @@ import { component$, useStyles$, useStylesScoped$, $ } from "@builder.io/qwik";
 import locationStyles from "./location.scss?inline";
 import { UserLocation } from "~/components/UserLocation/UserLocation";
 import { BigBtn } from "~/components/BigBtn/BigBtn";
+import { FaLocationCrosshairsSolid } from "@qwikest/icons/font-awesome";
 export default component$(() => {
   useStylesScoped$(locationStyles);
 
@@ -9,7 +10,7 @@ export default component$(() => {
     <div class="location">
       <div class="mapArea">
           <button class="centerBtn btn">
-            <i class="fa-solid fa-location-crosshairs fa-xl"></i>  
+            <FaLocationCrosshairsSolid />
           </button>
       </div>
       <svg
