@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+
+
+.categoryRow {
+    padding: $space-sides-mobile;
+    overflow: auto;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: $space2;
+
+        li {
+            padding: $space0 $space1;
+            background-color: $lightestGray;
+            border-radius: $rounded1;
+            color: $gray;
+        &.active {
+            background-color: $orange;
+            color: $white;
+        }
+        }
+    }
+}

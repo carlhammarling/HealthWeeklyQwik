@@ -32,7 +32,7 @@ export default component$(() => {
         </p>
         <UserLocation />
       </div>
-        <BigBtn path={'/info'}>Confirm</BigBtn>
+        <BigBtn path={'/products'}>Confirm</BigBtn>
     </div>
   );
 });

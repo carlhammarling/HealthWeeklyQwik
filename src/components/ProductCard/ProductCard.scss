@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+
+
+.productCard {
+    display: flex;
+    gap: $space-normal-mobile;
+    border: 1px solid $lightestGray;
+    width: 100%;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 1;
+        width: 115px;
+        height: 115px;
+        border-radius: $rounded1;
+    }
+   
+}

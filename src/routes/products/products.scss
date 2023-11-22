@@ -1,0 +1,10 @@
+@import "../../styles/variables";
+
+.products {
+    .productsList {
+        margin-inline: $space-sides-mobile;
+        display: grid;
+        grid-template-rows: 1;
+        gap: $space4;
+    }
+}
