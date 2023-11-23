@@ -1,27 +1,68 @@
 @import "../../styles/variables";
 
 .userLocation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .adress {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    gap: $space-normal-mobile;
 
-    .adress {
-      display: flex;
-      align-items: center;
-      gap: $space-normal-mobile;
-
-      .icon {
-        color: $gray;
-        font-size: $icon-size;
-      }
-    }
-    .editBtn {
-      border: 0;
-      width: 35px;
-      transform: translateX(5px);
-      aspect-ratio: 1;
-      background-color: transparent;
-      font-size: $icon-size-sm;
+    .icon {
+      color: $gray;
+      font-size: $icon-size;
     }
   }
+  .editBtn {
+    border: 0;
+    width: 35px;
+    transform: translateX(5px);
+    aspect-ratio: 1;
+    background-color: transparent;
+    font-size: $icon-size-sm;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: $gap-whitespace3;
+
+    .inputGroup {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-whitespace1;
+    }
+
+    input {
+      padding: $space0;
+      border: 1px solid $gray;
+      border-radius: $rounded0;
+    }
+    .buttons {
+      display: flex;
+      gap: $gap-whitespace3;
+      button {
+        border: 0;
+        font-size: 16px;
+        border-radius: $rounded2;
+        color: $white;
+        display: grid;
+        place-content: center;
+        height: 52px;
+
+        &.submit {
+          flex-grow: 4;
+          background-color: $primaryGreen;
+        }
+        &.cancel {
+          flex-grow: 1;
+          background-color: red;
+        }
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ $space9: 56px;
 $space10: 64px;
 
 $space-normal-mobile: $space2;
-$space-sides-mobile: $space6;
+$space-sides-mobile: $space4;
 $space-xl-mobile: $space9;
 
 $shadow1: 0px 4px 30px 0px rgba(80, 89, 98, 0.10);
@@ -36,6 +36,13 @@ $rounded1: 8px;
 $rounded2: 12px;
 $rounded3: 16px;
 $rounded4: 20px;
+
+
+$gap-whitespace0: $spaceXs;
+$gap-whitespace1: $space0;
+$gap-whitespace2: $space2;
+$gap-whitespace3: $space4;
+$gap-whitespace4: $space6;
 
 $icon-size-xs: $space2;
 $icon-size-sm: $space3;

@@ -21,7 +21,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            margin: $space0;
+            margin: $gap-whitespace1;
         }
     
     }
@@ -29,7 +29,7 @@
     .prodInfo {
         display: flex;
         flex-direction: column;
-        gap: $space0;
+        gap: $gap-whitespace1;
 
         :first-child {
             display: flex;

@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 
 .location {
-  background-color: $orange;
+  background-image: url('../../assets/images/MapDummy.png');
   display: flex;
   flex-direction: column;
   height: 100dvh;
@@ -30,13 +30,13 @@
   }
 
   .locationInfo {
-    height: 340px;
+    min-height: 340px;
     padding-inline: $space-sides-mobile;
     background-color: $white;
     padding-block: $space-xl-mobile;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: $gap-whitespace4;
     align-items: center;
     padding-bottom: 7rem;
   }

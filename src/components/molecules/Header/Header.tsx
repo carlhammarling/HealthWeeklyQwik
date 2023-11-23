@@ -6,7 +6,6 @@ import {
   FaChevronLeftSolid,
 } from "@qwikest/icons/font-awesome";
 import HeaderStyle from "./Header.scss?inline";
-import LogoHW2 from "../../../assets/images/LogoHW2.png";
 import { CartContext } from "~/contexts/cartContext";
 
 export default component$(() => {
