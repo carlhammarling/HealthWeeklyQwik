@@ -7,7 +7,7 @@ import {
 } from "@qwikest/icons/font-awesome";
 import HeaderStyle from "./Header.scss?inline";
 import LogoHW2 from "../../../assets/images/LogoHW2.png";
-import { CartContext } from "~/root";
+import { CartContext } from "~/contexts/cartContext";
 
 export default component$(() => {
   useStylesScoped$(HeaderStyle);
@@ -32,10 +32,10 @@ export default component$(() => {
             <Link href="/cart">
               <FaCartShoppingSolid class="icon" />
             </Link>
+            <div class={cartCount.count > 0 ? "cartCount" : "hide"}>
+              <p class={cartCount.count > 9 ? "xs" : ""}>{cartCount.count}</p>
+            </div>
           </li>
-          {cartCount.count > 0 && (
-            <div class="cartCount">{cartCount.count}</div>
-          )}
         </ul>
       </nav>
       <input type="text" placeholder="Search for a dish" />

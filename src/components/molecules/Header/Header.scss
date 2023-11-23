@@ -12,19 +12,46 @@
     align-items: center;
 
     .iconWrapper {
-        display: flex;
-        width: 30px;
-        aspect-ratio: 1;
+      display: flex;
+      width: 30px;
+      aspect-ratio: 1;
+      position: relative;
 
-        .icon {
-            color: $white;
-            font-size: $icon-size;
-          }
+      .icon {
+        color: $white;
+        font-size: $icon-size;
+      }
+
+      .cartCount {
+        position: absolute;
+        opacity: 1;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border-radius: 50%;
+        top: -12px;
+        right: -12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 600;
+        transition: 0.2s ease-in-out;
+
+        p {
+          color: $orange;
+        }
+      }
+      .hide {
+        opacity: 0;
+        top: 0px;
+        right: 0px;
+      }
     }
 
     button {
-        border: 0;
-        background: transparent;
+      border: 0;
+      background: transparent;
     }
   }
   input {

@@ -4,7 +4,7 @@ import CategoryRow from "~/components/molecules/CategoryRow/CategoryRow";
 import ProductCard from "~/components/molecules/ProductCard/ProductCard";
 import ProductsStyles from "./products.scss?inline";
 import { routeLoader$ } from "@builder.io/qwik-city";
-import { CartContext } from "~/root";
+import { CartContext } from "~/contexts/cartContext";
 
   //Glöm inte att starta servern för dummydata: json-server -w ./public/products.json
   // const BASE_URL = "http://localhost:3000";

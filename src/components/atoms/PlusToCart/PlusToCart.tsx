@@ -1,7 +1,7 @@
 import { component$, useStylesScoped$, $, useContext } from "@builder.io/qwik";
 import { FaPlusSolid } from "@qwikest/icons/font-awesome";
 import PlusToCartStyles from './PlusToCart.scss?inline';
-import { CartContext } from "~/root";
+import { CartContext } from "~/contexts/cartContext";
 
 
 export default component$((props: PlusToCartProps) => {
