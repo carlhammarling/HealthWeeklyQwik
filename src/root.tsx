@@ -5,17 +5,24 @@ import {
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
-
+import { type Signal, useSignal, useContext, useContextProvider, createContextId, useStore } from '@builder.io/qwik';
 import "./global.scss";
 
-export default component$(() => {
-  /**
-   * The root of a QwikCity site always start with the <QwikCityProvider> component,
-   * immediately followed by the document's <head> and <body>.
-   *
-   * Don't remove the `<head>` and `<body>` elements.
-   */
 
+
+
+
+export const CartContext = createContextId<Cart>('cart-context');
+
+export default component$(() => {
+
+const cartState: Cart = useStore({
+  productIds: [],
+  count: 0
+});
+
+
+useContextProvider(CartContext, cartState)
   return (
     <QwikCityProvider>
       <head>

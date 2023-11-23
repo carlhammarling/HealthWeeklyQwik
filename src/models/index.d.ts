@@ -8,6 +8,11 @@ interface Product {
     price: number,
     img: string,
     rating: number,
-}
+};
 
-type Categories = string[] 
+type Categories = string[];
+
+interface Cart {
+    productIds: string[],
+    count: number
+  };

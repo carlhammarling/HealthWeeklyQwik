@@ -1,4 +1,5 @@
-import { component$, useStyles$, useStylesScoped$ } from "@builder.io/qwik";
+
+import ImgLogohw from '~/assets/images/LogoHW.png?jsx';import { component$, useStyles$, useStylesScoped$ } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
 import { FaCircleCheckSolid } from '@qwikest/icons/font-awesome'
 
@@ -10,7 +11,7 @@ export default component$(() => {
   return (
     <div class="home">
       <div class="logoArea">
-        <img src={logo} alt="" />
+        <ImgLogohw alt="" />
         <div class="goBtn">
           <Link class="btn" href="/location">
             Go!

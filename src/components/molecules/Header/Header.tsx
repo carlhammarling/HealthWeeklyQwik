@@ -1,11 +1,19 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import ImgLogohw2 from "~/assets/images/LogoHW2.png?jsx";
+import { component$, useContext, useStylesScoped$ } from "@builder.io/qwik";
 import { Link, useNavigate } from "@builder.io/qwik-city";
-import { FaCartShoppingSolid, FaChevronLeftSolid } from '@qwikest/icons/font-awesome'
+import {
+  FaCartShoppingSolid,
+  FaChevronLeftSolid,
+} from "@qwikest/icons/font-awesome";
 import HeaderStyle from "./Header.scss?inline";
 import LogoHW2 from "../../../assets/images/LogoHW2.png";
+import { CartContext } from "~/root";
 
 export default component$(() => {
   useStylesScoped$(HeaderStyle);
+
+  const cartCount = useContext(CartContext);
+
   return (
     <div class="header">
       <nav>
@@ -17,7 +25,7 @@ export default component$(() => {
           </li>
           <li>
             <Link href="/">
-              <img class="logo" src={LogoHW2} alt="" />
+              <ImgLogohw2 class="logo" alt="" />
             </Link>
           </li>
           <li class="iconWrapper">
@@ -25,6 +33,9 @@ export default component$(() => {
               <FaCartShoppingSolid class="icon" />
             </Link>
           </li>
+          {cartCount.count > 0 && (
+            <div class="cartCount">{cartCount.count}</div>
+          )}
         </ul>
       </nav>
       <input type="text" placeholder="Search for a dish" />
