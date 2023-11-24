@@ -6,7 +6,6 @@ import {
   useResource$,
   useStore,
   useStylesScoped$,
-  useTask$,
 } from "@builder.io/qwik";
 import { Link, useNavigate } from "@builder.io/qwik-city";
 import {
@@ -26,10 +25,15 @@ export default component$(() => {
   const cartCount = useContext(CartContext);
   const search = useContext(SearchContext);
 
-  useTask$(() => {
-    search.searchInput = "";
-  })
+  
+  const searchResult = useResource$<any>(async ({ track, cleanup }) => {
+    const searchReq = track(() => search.searchInput);
+    const abortController = new AbortController();
+    cleanup(() => abortController.abort());
 
+   return await fetchSearchResults(searchReq);
+
+  });
   
   return (
     <div class="header">
@@ -60,7 +64,19 @@ export default component$(() => {
         placeholder="Search for a dish"
         onInput$={(e: any) => (search.searchInput = e.target.value)}
       />
+      <p>{search.searchInput}</p>
 
+      {/* Hur typear jag detta? */}
+      <Resource
+        value={searchResult}
+        onPending={() => <div>Loading</div>}
+        onRejected={(resason) => <div>Error: {resason}</div>}
+        onResolved={(results) =>
+          results?.map((item: Product, index: number) => (
+            <p key={index}>{item.name}</p>
+          ))
+        }
+      />
     </div>
   );
 });

@@ -7,14 +7,16 @@ import {
 import { RouterHead } from "./components/router-head/router-head";
 import "./global.scss";
 import { CartContext, useCartStore } from "./contexts/cartContext";
+import { SearchContext, useSearchStore } from "./contexts/searchContext";
 
-// export const CartContext = createContextId<Cart>('cart-context');
 
 export default component$(() => {
 
-  const cartState = useCartStore()
+  const cartState = useCartStore();
+  const searchState = useSearchStore();
 
-useContextProvider(CartContext, cartState)
+useContextProvider(CartContext, cartState);
+useContextProvider(SearchContext, searchState);
   return (
     <QwikCityProvider>
       <head>

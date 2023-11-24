@@ -4,6 +4,8 @@ import Rating from "~/components/atoms/Rating/Rating";
 import Allergens from "../Allergens/Allergens";
 import PlusToCart from "~/components/atoms/PlusToCart/PlusToCart";
 
+
+
 export default component$((item: Product) => {
   useStyles$(ProductCardStyles)
 

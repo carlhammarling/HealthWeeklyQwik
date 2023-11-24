@@ -16,3 +16,7 @@ interface Cart {
     productIds: string[],
     count: number
   };
+
+  interface Search {
+    searchInput: string;
+  }

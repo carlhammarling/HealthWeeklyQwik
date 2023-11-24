@@ -6,6 +6,10 @@
     gap: $space-normal-mobile;
     width: 100%;
 
+    &.dark {
+        background-color: black;
+    }
+
     .imgContainer {
         position: relative;
 
