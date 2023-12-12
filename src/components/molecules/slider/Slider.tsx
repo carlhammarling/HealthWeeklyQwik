@@ -53,6 +53,15 @@ export const Slider = component$(() => {
     }
   });
 
+  const changeSize = $(() => {
+    const sliderContainer = sliderContainerRef.value;
+    if (sliderContainer?.firstElementChild instanceof HTMLElement) {
+      sliderContainer.firstElementChild.style.width = "300px";
+    }
+    console.log("hej")
+
+  });
+
   useVisibleTask$(() => {
     goTo(0);
     // const sliderContainer = sliderContainerRef.value;
@@ -78,6 +87,7 @@ export const Slider = component$(() => {
           <div
             class={`sliderCard ${position.value === index ? "opacity" : ""}`}
             key={index}
+            onClick$={changeSize}
           >
             {item.text}
           </div>
