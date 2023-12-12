@@ -1,4 +1,4 @@
-import { component$, useContext, $ } from "@builder.io/qwik";
+import { component$, useContext, $, useTask$ } from "@builder.io/qwik";
 import { CartContext } from "~/contexts/cartContext";
 
 export default component$(() => {
@@ -16,6 +16,7 @@ export default component$(() => {
     }
   });
 
+  
   return (
     <div>
       {cartData.productIds && cartData.productIds.map((item, index) => (

@@ -1,0 +1,87 @@
+@import "../../../styles/variables";
+
+.sliderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $space-normal-mobile;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  .navDotsContainer {
+    display: flex;
+    justify-content: center;
+    gap: $space1;
+
+    .navDot {
+      height: 15px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: $lightGray;
+      transition: 0.3s ease-in-out;
+
+      &.active {
+        background-color: $gray;
+      }
+    }
+  }
+
+  .sliderContainer {
+    display: flex;
+    gap: $space-normal-mobile;
+    transition: 0.3s ease-in-out;
+    padding-left: 95px;
+
+    .sliderCard {
+      display: flex;
+      gap: $space-normal-mobile;
+      flex-shrink: 0;
+      width: 200px;
+      height: 100px;
+      background-color: $lightGray;
+      border-radius: $rounded1;
+      opacity: 0.5;
+      scale: 0.9;
+      padding: $space-sides-mobile;
+      transition: 0.3s ease-in-out;
+    }
+
+    .opacity {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  button {
+    display: grid;
+    place-content: center;
+    width: 35px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 0;
+    position: absolute;
+    top: 50%;
+    transition: 0.3s ease-in-out;
+    background-color: black;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+
+    &:hover {
+      scale: 0.9;
+    }
+
+    &#left {
+      left: 10px;
+    }
+
+    &#right {
+      right: 10px;
+    }
+
+    &.hide {
+      opacity: 0;
+      scale: 0.2;
+    }
+  }
+}

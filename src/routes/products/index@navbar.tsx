@@ -4,7 +4,6 @@ import {
   component$,
   useContext,
   useResource$,
-  useStore,
   useStylesScoped$,
 } from "@builder.io/qwik";
 import CategoryRow from "~/components/molecules/CategoryRow/CategoryRow";
@@ -13,6 +12,7 @@ import ProductsStyles from "./products.scss?inline";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import { fetchSearchResults } from "~/utils/fetchSerarchResults";
 import { SearchContext } from "~/contexts/searchContext";
+import { Slider } from "~/components/molecules/slider/Slider";
 
 //Glöm inte att starta servern för dummydata: json-server -w ./public/products.json
 // const BASE_URL = "http://localhost:3000";
@@ -50,16 +50,16 @@ export default component$(() => {
 
       <Resource
         value={searchResult}
-        onPending={() => <div>Loading</div>}
+        onPending={() => <div></div>}
         onRejected={(resason) => <div>Error: {resason}</div>}
-        onResolved={(results) => (
-          results && results.length > 0 ? (
+        onResolved={(results) => (results.length > 0 ? (
           <div class="productsList">
             <h1>Search results</h1>
-            {results?.map((item: Product) => (
+            {results.map((item: Product) => (
               <ProductCard key={item.id} {...item} />
             ))}
-          </div>) : (<></>)
+          </div>) : (<></>
+)
         )}
       />
       <div class="productsList">
@@ -67,6 +67,7 @@ export default component$(() => {
         {products.value &&
           products.value.map((item) => <ProductCard key={item.id} {...item} />)}
       </div>
+      <Slider />
     </div>
   );
 });
